@@ -1,83 +1,180 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CV Alan Joseph</title>
 
 <style>
-body{
+
+*{
     margin:0;
-    font-family: Arial;
-    display:flex;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* IZQUIERDA */
+body{
+    font-family: 'Segoe UI', sans-serif;
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
 .sidebar{
     width:30%;
-    background:#0f8a9d;
+    background:linear-gradient(180deg,#0f8a9d,#0a6c7a);
     color:white;
-    padding:20px;
+    padding:30px 20px;
 }
 
-/* DERECHA */
+.perfil{
+    width:140px;
+    height:170px;
+    object-fit:cover;
+    border-radius:15px;
+    display:block;
+    margin:0 auto 20px auto;
+    border:3px solid white;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.sidebar h3{
+    margin-top:20px;
+    margin-bottom:10px;
+    border-bottom:2px solid rgba(255,255,255,0.3);
+    padding-bottom:5px;
+}
+
+.sidebar p{
+    margin:8px 0;
+    font-size:14px;
+}
+
+/* MAIN */
 .main{
     width:70%;
-    padding:30px;
-    background:#f5f5f5;
-}
-
-img{
-    width:120px;
-    border-radius:10px;
+    background:#f4f4f4;
+    padding:40px;
 }
 
 h1{
-    margin:0;
+    font-size:40px;
+}
+
+.subtitle{
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
 .section{
-    margin-bottom:20px;
-    border-bottom:2px solid #ccc;
-    padding-bottom:10px;
+    margin-bottom:25px;
 }
+
+.section h3{
+    border-bottom:2px solid #ccc;
+    padding-bottom:5px;
+    margin-bottom:10px;
+}
+
+.section p{
+    line-height:1.5;
+}
+
+/* HABILIDADES GRID */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    body{
+        flex-direction:column;
+    }
+
+    .sidebar, .main{
+        width:100%;
+    }
+
+    h1{
+        font-size:28px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- IZQUIERDA -->
 <div class="sidebar">
-    <img src="foto.jpg">
+
+    <img src="foto.png" class="perfil">
 
     <h3>CONTACTO</h3>
     <p>📞 722 394 0784</p>
     <p>📧 mortylaxso@gmail.com</p>
+    <p>📍 Ixtlahuaca</p>
 
     <h3>REFERENCIAS</h3>
     <p>Mueblería Hernández</p>
+    <p>Mueblería Hernández Toluca</p>
 
     <h3>REDES</h3>
     <p>Instagram</p>
+    <p>Facebook</p>
+    <p>Discord</p>
+
 </div>
 
+<!-- DERECHA -->
 <div class="main">
+
     <h1>ALAN JOSEPH</h1>
-    <p><b>ESTUDIANTE / TRABAJADOR</b></p>
+    <p class="subtitle">ESTUDIANTE / TRABAJADOR</p>
 
     <div class="section">
         <h3>SOBRE MÍ</h3>
-        <p>Soy estudiante del Instituto Cultural Canadiense...</p>
+        <p>
+        Soy estudiante del Instituto Cultural Canadiense y actualmente estudio ingeniería mecatrónica.
+        También cuento con experiencia en negocios familiares y trabajo entre semana.
+        </p>
     </div>
 
     <div class="section">
         <h3>EXPERIENCIA</h3>
-        <p>Experiencia en negocios y trabajo...</p>
+        <p>
+        Experiencia en negocios y trabajo, manejo de ventas, atención al cliente y trabajo en equipo.
+        Desarrollo habilidades en liderazgo y resolución de problemas.
+        </p>
     </div>
 
     <div class="section">
         <h3>EDUCACIÓN</h3>
         <p>Instituto Cultural Canadiense</p>
+        <p>Trabajo en negocios familiares</p>
     </div>
+
+    <div class="section">
+        <h3>HABILIDADES</h3>
+        <div class="grid">
+            <p>✔ Liderazgo</p>
+            <p>✔ Comunicación</p>
+            <p>✔ Toma de decisiones</p>
+            <p>✔ Trabajo en equipo</p>
+            <p>✔ Gestión del tiempo</p>
+            <p>✔ Pensamiento estratégico</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>IDIOMAS</h3>
+        <p>Español</p>
+        <p>Inglés</p>
+        <p>Francés</p>
+    </div>
+
 </div>
 
 </body>
