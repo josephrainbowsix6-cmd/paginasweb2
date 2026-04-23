@@ -49,6 +49,10 @@ h1{
     <img src="foto.jpg">
 
     <h3>CONTACTO</h3>
+    <div class="sidebar">
+    <img src="profile_github.png" style="width:120px; border-radius:50%;">
+
+    <h3>CONTACTO</h3>
     <p>📞 722 394 0784</p>
     <p>📧 mortylaxso@gmail.com</p>
 
